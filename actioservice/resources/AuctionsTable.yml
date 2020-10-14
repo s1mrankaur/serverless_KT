@@ -1,0 +1,12 @@
+AuctionsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        TableName: AuctionsTable-${self:provider.stage}
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions: 
+          - AttributeName: id 
+            AttributeType: S
+        
